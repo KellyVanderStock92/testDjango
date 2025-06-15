@@ -1,0 +1,12 @@
+# negeer het .env bestand
+.env
+
+# negeer de virtuele omgeving
+mijnVenv/
+
+# Python cache bestanden
+__pycache__/
+*.py[cod]
+
+# VS Code instellingen (optioneel)
+.vscode/
