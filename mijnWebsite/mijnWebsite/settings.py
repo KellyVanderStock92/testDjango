@@ -118,6 +118,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
+# Set the default language code to Dutch (Belgium)
 LANGUAGE_CODE = 'nl-be'
 
 TIME_ZONE = 'CET'
