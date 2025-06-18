@@ -40,7 +40,7 @@ DEBUG = os.getenv('DJANGO_DEBUG', 'True') == 'True'
 # DEBUG = True (dit moet ook terugkomen)
 
 # zorgt ervoor dat de website alleen toegankelijk is via pythonanywhere.com, kreeg een error wanneer deze niet was ingevuld
-ALLOWED_HOSTS = ['localhost', '.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.pythonanywhere.com']
 
 
 
