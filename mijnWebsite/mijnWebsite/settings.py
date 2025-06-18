@@ -39,7 +39,9 @@ DEBUG = os.getenv('DJANGO_DEBUG', 'True') == 'True'
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True (dit moet ook terugkomen)
 
-ALLOWED_HOSTS = []
+# zorgt ervoor dat de website alleen toegankelijk is via pythonanywhere.com, kreeg een error wanneer deze niet was ingevuld
+ALLOWED_HOSTS = ['localhost', '.pythonanywhere.com']
+
 
 
 # Application definition
