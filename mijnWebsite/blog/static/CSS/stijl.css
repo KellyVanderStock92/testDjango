@@ -1,14 +1,32 @@
 body {
-	background-color: orange;
+	background-color: brown;
 	color: black;
 }
-
-h1 {
-	color: white;
+header {
+	height: 150px;
+	background-color: orange;
 }
-
+h1 {
+	color: black;
+	padding-top: 45px;
+	padding-left: 45px;
+}
+a {
+	color: orange;
+}
+div {
+	background-color: pink;
+	width: 500px;
+	margin: 25px 350px 25px auto;
+}
 article {
 	width: 500px;
-	margin-bottom: 40px;
-	border: 3px solid red;
+	margin: 25px 350px 25px auto;
+	border: 3px solid white;
+	background-color: pink;
+}
+
+footer {
+	height: 75px;
+	background-color: orange;
 }
