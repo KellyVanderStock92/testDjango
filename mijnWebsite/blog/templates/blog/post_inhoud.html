@@ -10,9 +10,12 @@
 	<!--Toon de titel van de post-->
 	<p>{{ post.text|linebreaksbr }}</p>
 	<!--Toon de inhoud van de post, waarbij linebreaks worden omgezet naar <br> tags voor HTML-weergave-->
-
-	{% endblock %}
+	<form method="post" action="{% url 'delete' post.id %}">
+		{% csrf_token %}
+		<button type="submit" class="btn btn-danger">Verwijder post</button>
+	</form>
 </article>
+{% endblock %}
 <!--# deze template is voor de detailpagina van een post, hier wordt de inhoud van de post getoond
 # deze template wordt gebruikt in de post_detail view, die de inhoud van de post ophaalt uit de database en deze doorgeeft aan de template
 # de template wordt gerenderd en de inhoud van de post wordt getoond aan de bezoeker

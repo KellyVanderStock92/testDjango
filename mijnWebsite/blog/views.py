@@ -17,8 +17,6 @@ def post_detail(request, pk): # pk staat voor primary key, dit is een unieke ide
     post=get_object_or_404(Post, pk=pk) # haal het Post object op met de opgegeven primary key, als het niet bestaat, geef dan een 404 foutmelding
     return render(request, 'blog/post_inhoud.html', {'post': post}) # template post_inhoud.html wordt gerenderd en wordt opgevuld met de inhoud van het Post object, dit wordt dan aan bezoeker getoond als mooie pagina. template aanmaken in de templates/blog folder
 
-
-
 #functie die redirect naar de post_list view na het opslaan van een nieuw bericht
 def post_nieuw(request):
     if request.method == "POST":  # controleer of het verzoek een POST-verzoek is
@@ -33,3 +31,12 @@ def post_nieuw(request):
         form = PostForm()  # maak een nieuw PostForm object aan voor GET-verzoeken
 
     return render(request, 'blog/post_edit.html', {'form': form})  # render de template post_edit.html en geef het formulier door aan de template
+
+#functie die een bestaand bericht verwijdert
+def delete_post(request, pk):
+    post_to_delete = get_object_or_404(Post, id=pk)
+    if request.method == "POST":
+        post_to_delete.delete()
+        return redirect('post_list')  # na verwijderen terug naar lijst
+    # Als iemand via GET komt: toon een bevestigingspagina (optioneel)
+    return render(request, 'blog/post_bevestig_verwijderen.html', {'post': post_to_delete})
