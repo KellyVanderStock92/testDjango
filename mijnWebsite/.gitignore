@@ -10,3 +10,6 @@ __pycache__/
 
 # VS Code instellingen (optioneel)
 .vscode/
+
+#negeer deze database bestanden
+db.sqlite3
