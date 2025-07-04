@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %} {% block inhoud %}
+<article class="post">
+	{% if post.published_date %}
+	<!--Controleer of de post een publicatiedatum heeft-->
+	<time class="date"> {{ post.published_date }} </time>
+	<!-- Toon de publicatiedatum van de post-->
+	{%endif %}
+	<!--als de post geen publicatiedatum heeft, dan wordt deze niet getoond-->
+	<h2>{{post.title}}</h2>
+	<!--Toon de titel van de post-->
+	<p>{{ post.text|linebreaksbr }}</p>
+	<!--Toon de inhoud van de post, waarbij linebreaks worden omgezet naar <br> tags voor HTML-weergave-->
+
+	{% endblock %}
+</article>
+<!--# deze template is voor de detailpagina van een post, hier wordt de inhoud van de post getoond
+# deze template wordt gebruikt in de post_detail view, die de inhoud van de post ophaalt uit de database en deze doorgeeft aan de template
+# de template wordt gerenderd en de inhoud van de post wordt getoond aan de bezoeker
+# de template maakt gebruik van de post variabele die is doorgegeven vanuit de post_detail view -->
