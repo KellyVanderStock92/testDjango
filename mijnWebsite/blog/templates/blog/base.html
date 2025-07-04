@@ -12,6 +12,8 @@
 	<body>
 		<header>
 			<h1>Mijn website</h1>
+			<a href="{% url 'post_nieuw' %}" class="top-menu">Post schrijven</a>
+			<!-- Dit is de link in de comment in forms.py -- Hierna urls.py nieuw path definieren-->
 		</header>
 		<section id="main-content">{% block inhoud %}{% endblock %}</section>
 		<footer>
