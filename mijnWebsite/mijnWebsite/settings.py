@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog', #Deze app is zelf toegevoegd en moet hier worden vermeld
+    'polls', #toegevoegd om Kamner te gebruiken
 ]
 
 MIDDLEWARE = [
